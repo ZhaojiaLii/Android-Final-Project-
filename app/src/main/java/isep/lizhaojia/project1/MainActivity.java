@@ -1,16 +1,18 @@
 package isep.lizhaojia.project1;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.ImageButton;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
@@ -20,18 +22,33 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         //declare
         drawerLayout = (DrawerLayout)findViewById(R.id.drawer);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        NavigationView navigationView = findViewById(R.id.nav_layout);
+
+
         //active bottom navigation listener
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new fragment_account()).commit();
+
 
         //active sidebar listener
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+//                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+//        drawer.setDrawerListener(toggle);
+
+
+       //set sidebar click listener
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.open,R.string.close);
+        drawerLayout.setDrawerListener(toggle);
+        navigationView.setNavigationItemSelectedListener(this);
 
         //close default Navigation Bar
 //        View decorView = getWindow().getDecorView();
@@ -69,4 +86,31 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
     };
+
+    //sidebar click listener
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        Fragment selectedFragment = null;
+        switch (menuItem.getItemId()){
+            case R.id.profile:
+                selectedFragment = new fragment_profile();
+                break;
+            case R.id.my_currency:
+                selectedFragment = new fragment_main_currency();
+                break;
+            case R.id.background:
+                selectedFragment = new fragment_background();
+                break;
+            case R.id.upgrade:
+                selectedFragment = new fragment_upgrade();
+                break;
+            case R.id.about:
+                selectedFragment = new fragment_aboutus();
+                break;
+        }
+        drawerLayout.closeDrawer(GravityCompat.START);
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();
+        return true;
+
+    }
 }

@@ -1,95 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/pink"
     >
 
-    <ImageButton
-        android:id="@+id/imageButton_convertor"
-        android:layout_width="100dp"
-        android:layout_height="77dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="280dp"
-        android:layout_marginTop="51dp"
-        android:layout_marginEnd="31dp"
-        android:layout_marginBottom="475dp"
-        app:srcCompat="@drawable/convertorbutton" />
-
     <TextView
-        android:id="@+id/expenditure"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/imageButton_convertor"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="42dp"
-        android:layout_marginTop="-27dp"
-        android:text="EXPENDITURE"
-        android:textSize="24sp" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/expenditure"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="15dp"
-        android:ems="10"
-        android:inputType="number|numberDecimal" />
-
-    <ImageButton
-        android:id="@+id/income"
-        android:layout_width="127dp"
-        android:layout_height="55dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="278dp"
-        android:layout_marginTop="227dp"
-        app:srcCompat="@drawable/incomebutton" />
-
-    <TextView
-        android:id="@+id/remainedbudget"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/imageButton_convertor"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="37dp"
-        android:layout_marginBottom="-2dp"
-        android:text="remained budget"
-        android:textSize="22sp" />
-
-    <ImageButton
-        android:id="@+id/budgetbutton"
-        android:layout_width="94dp"
-        android:layout_height="37dp"
-        android:layout_alignStart="@+id/editText"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="142dp"
-        app:srcCompat="@drawable/budgetbutton" />
-
-    <TextView
-        android:id="@+id/remain_budget"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/expenditure"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="149dp"
-        android:layout_marginEnd="-8dp"
-        android:text="______"
-        android:textSize="22sp" />
-
-    <ImageButton
-        android:id="@+id/note"
-        android:layout_width="265dp"
-        android:layout_height="54dp"
-        android:layout_alignStart="@+id/expenditure"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="-42dp"
-        android:layout_marginTop="227dp"
-        app:srcCompat="@drawable/notebutton" />
+        android:textSize="30sp"
+        android:text="Bill Fragment"
+        android:layout_centerInParent="true" />
 
 </RelativeLayout>
