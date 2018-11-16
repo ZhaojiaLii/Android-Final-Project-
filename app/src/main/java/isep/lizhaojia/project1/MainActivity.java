@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             Fragment selectedFragment = null;
             switch (menuItem.getItemId()){
                 case R.id.navigation_bill:
-                    selectedFragment = new fragment_home();
+                    selectedFragment = new fragment_bill();
                     break;
                 case R.id.navigation_expenditure:
                     selectedFragment = new fragment_expenditure();
