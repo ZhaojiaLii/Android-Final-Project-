@@ -21,16 +21,31 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 
 public class fragment_bill extends Fragment {
+<<<<<<< HEAD
+=======
 
 
+<<<<<<< HEAD
     private ImageButton ButtonConvertor, BudgetButton,IncomeButton,NoteButton;
     private TextView expenditure,remainedbudget;
+=======
+    private ImageButton ButtonConvertor,BudgetButton;
+    private TextView expenditure;
+>>>>>>> 5384391b4471f527a66d93c659b454d3469f4137
+>>>>>>> c39a717850f0196a385ea87c86fb7d5bc6c3ab12
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+<<<<<<< HEAD
         return inflater.inflate(R.layout.fragment_bill, container, false);
     }
+=======
+<<<<<<< HEAD
+        return inflater.inflate(R.layout.fragment_bill, container, false);
+=======
+        return inflater.inflate(R.layout.fragment_bill, container, false);}
+>>>>>>> c39a717850f0196a385ea87c86fb7d5bc6c3ab12
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -82,6 +97,7 @@ public class fragment_bill extends Fragment {
         });
     }
 
+<<<<<<< HEAD
     public void dialogEditText() {
         final EditText editText = new EditText(getActivity());
         final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), 3);
@@ -101,5 +117,11 @@ public class fragment_bill extends Fragment {
             }
         });
         builder.create().show();
+=======
+    public void dialogEditText(){
+
+
+>>>>>>> 5384391b4471f527a66d93c659b454d3469f4137
+>>>>>>> c39a717850f0196a385ea87c86fb7d5bc6c3ab12
     }
 }
