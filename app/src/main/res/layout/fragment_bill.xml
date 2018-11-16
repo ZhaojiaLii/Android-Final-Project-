@@ -46,7 +46,7 @@
         android:layout_height="55dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="273dp"
+        android:layout_marginStart="278dp"
         android:layout_marginTop="227dp"
         app:srcCompat="@drawable/incomebutton" />
 
@@ -81,5 +81,15 @@
         android:layout_marginEnd="-8dp"
         android:text="______"
         android:textSize="22sp" />
+
+    <ImageButton
+        android:id="@+id/note"
+        android:layout_width="265dp"
+        android:layout_height="54dp"
+        android:layout_alignStart="@+id/expenditure"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-42dp"
+        android:layout_marginTop="227dp"
+        app:srcCompat="@drawable/notebutton" />
 
 </RelativeLayout>
