@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".fragment_bill">
 
+    <ImageView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/background"/>
+
     <ImageButton
         android:id="@+id/imageButton_convertor"
         android:layout_width="106dp"
