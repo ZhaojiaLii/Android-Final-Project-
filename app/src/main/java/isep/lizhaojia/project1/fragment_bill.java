@@ -23,7 +23,8 @@ import android.content.DialogInterface;
 public class fragment_bill extends Fragment {
 
 
-    private ImageButton ButtonConvertor, BudgetButton,IncomeButton,NoteButton;
+    private ImageButton ButtonConvertor;
+    private Button IncomeButton,NoteButton,BudgetButton;
     private TextView expenditure,remainedbudget;
 
     @Nullable
@@ -37,9 +38,9 @@ public class fragment_bill extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
         ButtonConvertor = (ImageButton)getActivity().findViewById(R.id.imageButton_convertor) ;
-        BudgetButton = (ImageButton) getActivity().findViewById(R.id.budgetbutton);
-        IncomeButton = (ImageButton)getActivity().findViewById(R.id.income);
-        NoteButton = (ImageButton)getActivity().findViewById(R.id.note);
+        BudgetButton = (Button) getActivity().findViewById(R.id.budgetbutton);
+        IncomeButton = (Button)getActivity().findViewById(R.id.income);
+        NoteButton = (Button)getActivity().findViewById(R.id.note);
         expenditure = (TextView) getActivity().findViewById(R.id.expenditure);
         remainedbudget = (TextView)getActivity().findViewById(R.id.remain_budget);
 
