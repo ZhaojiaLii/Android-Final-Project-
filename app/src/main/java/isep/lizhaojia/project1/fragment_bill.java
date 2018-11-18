@@ -1,6 +1,10 @@
 package isep.lizhaojia.project1;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -20,12 +24,17 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 
+import java.util.ArrayList;
+
+import static android.content.Context.MODE_PRIVATE;
+
 public class fragment_bill extends Fragment {
 
 
     private ImageButton ButtonConvertor;
     private Button IncomeButton,NoteButton,BudgetButton;
-    private TextView expenditure,remainedbudget;
+    private TextView expenditure,remainedbudget,trySP;
+    ArrayList<String> tryList = new ArrayList<String>();
 
     @Nullable
     @Override
@@ -43,8 +52,11 @@ public class fragment_bill extends Fragment {
         NoteButton = (Button)getActivity().findViewById(R.id.note);
         expenditure = (TextView) getActivity().findViewById(R.id.expenditure);
         remainedbudget = (TextView)getActivity().findViewById(R.id.remain_budget);
+        trySP = (TextView)getActivity().findViewById(R.id.trySP);
 
         budget();
+        trydata();
+
         ButtonConvertor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -103,4 +115,11 @@ public class fragment_bill extends Fragment {
         });
         builder.create().show();
     }
+
+    public void trydata() {
+        SharedPreferences sharedPreferences = getContext().getSharedPreferences("IncomeInfo", Context.MODE_PRIVATE);
+        String income = sharedPreferences.getString("Income_", null);
+        trySP.setText(income);
+    }
+
 }

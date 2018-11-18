@@ -31,7 +31,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/textView_income"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.182" />
@@ -263,7 +263,7 @@
         app:layout_constraintVertical_bias="0.36" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView_income"
         android:layout_width="195dp"
         android:layout_height="50dp"
         android:textAlignment="center"

@@ -1,5 +1,7 @@
 package isep.lizhaojia.project1;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -11,6 +13,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -21,7 +24,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         //declare
         drawerLayout = (DrawerLayout)findViewById(R.id.drawer);
@@ -55,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
 //                | View.SYSTEM_UI_FLAG_FULLSCREEN;
 //        decorView.setSystemUiVisibility(uiOptions);
+
 
     }
 
