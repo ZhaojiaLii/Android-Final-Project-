@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //active bottom navigation listener
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new fragment_account()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new fragment_bill()).commit();
 
 
         //active sidebar listener
