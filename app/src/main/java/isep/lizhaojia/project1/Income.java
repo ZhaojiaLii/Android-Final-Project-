@@ -87,6 +87,7 @@ public class Income extends AppCompatActivity implements View.OnClickListener {
                     case R.id.button7:
                     case R.id.button8:
                     case R.id.button9:
+                    case R.id.buttonpoint:
                         if(clr_flag){
                             clr_flag=false;
                             str="";
