@@ -266,7 +266,7 @@
         android:id="@+id/textView_income"
         android:layout_width="195dp"
         android:layout_height="50dp"
-        android:hint="plz input income"
+        android:hint="plz input"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
