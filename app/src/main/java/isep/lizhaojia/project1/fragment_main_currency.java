@@ -35,7 +35,7 @@ public class fragment_main_currency extends Fragment {
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this,mNames,mImageUrls);
+       // RecyclerViewAdapter adapter = new RecyclerViewAdapter(this,mNames,mImageUrls);
 
 
 

@@ -96,11 +96,16 @@ public class Income extends AppCompatActivity implements View.OnClickListener {
                         textView.setText(str+((Button)v).getText());
                         break;
                     case R.id.confirm:
-                        SAVE();
-                        Toast.makeText(Income.this, "SAVE", Toast.LENGTH_LONG).show();
-                        Intent intent4 = new Intent(Income.this , MainActivity.class);
-                        intent4.putExtra("id", 2);
-                        startActivity(intent4);
+                        if(textView.length()>0){
+                            SAVE();
+                            Toast.makeText(Income.this, "SAVE", Toast.LENGTH_LONG).show();
+                            Intent intent4 = new Intent(Income.this , MainActivity.class);
+                            intent4.putExtra("id", 2);
+                            startActivity(intent4);}
+                        else {
+                            Intent intent4 = new Intent(Income.this , MainActivity.class);
+                            intent4.putExtra("id", 2);
+                            startActivity(intent4);}
                         break;
 
                 }
