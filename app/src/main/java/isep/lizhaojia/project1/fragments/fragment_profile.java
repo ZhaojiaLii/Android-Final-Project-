@@ -1,4 +1,4 @@
-package isep.lizhaojia.project1;
+package isep.lizhaojia.project1.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class fragment_upgrade extends Fragment {
+public class fragment_profile extends Fragment {
 
     @Nullable
     @Override

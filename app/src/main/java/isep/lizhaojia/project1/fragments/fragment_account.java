@@ -1,4 +1,4 @@
-package isep.lizhaojia.project1;
+package isep.lizhaojia.project1.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

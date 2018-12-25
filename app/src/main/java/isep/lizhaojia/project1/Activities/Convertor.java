@@ -1,7 +1,9 @@
-package isep.lizhaojia.project1;
+package isep.lizhaojia.project1.Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import isep.lizhaojia.project1.R;
 
 public class Convertor extends AppCompatActivity {
 

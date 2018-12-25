@@ -1,4 +1,4 @@
-package isep.lizhaojia.project1;
+package isep.lizhaojia.project1.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,18 +6,14 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.view.View;
-import android.app.Activity;
-import android.content.DialogInterface;
 import android.widget.TextView;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.widget.Toast;
 
-import org.json.JSONObject;
-
 import java.util.ArrayList;
-import java.util.Iterator;
+
+import isep.lizhaojia.project1.R;
 
 
 public class Income extends AppCompatActivity implements View.OnClickListener {
