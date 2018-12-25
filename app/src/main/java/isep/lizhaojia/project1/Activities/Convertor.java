@@ -1,4 +1,4 @@
-package isep.lizhaojia.project1.Activities;
+package isep.lizhaojia.project1;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -31,9 +31,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-
-import isep.lizhaojia.project1.R;
-
 import static com.android.volley.Request.*;
 import static com.android.volley.Request.Method.GET;
 

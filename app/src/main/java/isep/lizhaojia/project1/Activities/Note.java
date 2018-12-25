@@ -1,4 +1,4 @@
-package isep.lizhaojia.project1.Activities;
+package isep.lizhaojia.project1;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,8 +12,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-
-import isep.lizhaojia.project1.R;
 
 public class Note extends AppCompatActivity implements View.OnClickListener {
 

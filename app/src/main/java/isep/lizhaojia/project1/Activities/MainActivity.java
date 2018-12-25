@@ -1,5 +1,8 @@
-package isep.lizhaojia.project1.Activities;
+package isep.lizhaojia.project1;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
@@ -9,19 +12,13 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 
 import java.util.ArrayList;
-
-import isep.lizhaojia.project1.R;
-import isep.lizhaojia.project1.fragments.fragment_aboutus;
-import isep.lizhaojia.project1.fragments.fragment_account;
-import isep.lizhaojia.project1.fragments.fragment_background;
-import isep.lizhaojia.project1.fragments.fragment_bill;
-import isep.lizhaojia.project1.fragments.fragment_expenditure;
-import isep.lizhaojia.project1.fragments.fragment_main_currency;
-import isep.lizhaojia.project1.fragments.fragment_profile;
-import isep.lizhaojia.project1.fragments.fragment_upgrade;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
