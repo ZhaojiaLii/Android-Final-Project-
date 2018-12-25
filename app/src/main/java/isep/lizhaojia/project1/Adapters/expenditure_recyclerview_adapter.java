@@ -55,11 +55,14 @@ public class expenditure_recyclerview_adapter extends RecyclerView.Adapter<expen
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int i) {
         Log.d(TAG, "onBindViewHolder: onBindViewHolder called");
+
+        
         viewHolder.date_time.setText(date_time.get(i));
         viewHolder.element_name.setText(element_name.get(i));
         viewHolder.description_element.setText(description_element.get(i));
         viewHolder.amount.setText(amount.get(i));
         viewHolder.bank_card_used.setText(bank_card_used.get(i));
+
         viewHolder.expenditure.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

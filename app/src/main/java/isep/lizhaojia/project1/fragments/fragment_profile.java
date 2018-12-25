@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import isep.lizhaojia.project1.R;
+
 public class fragment_profile extends Fragment {
 
     @Nullable
