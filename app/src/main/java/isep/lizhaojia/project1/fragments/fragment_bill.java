@@ -1,17 +1,12 @@
-package isep.lizhaojia.project1;
+package isep.lizhaojia.project1.fragments;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.TypedValue;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,12 +16,14 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.DialogInterface;
 
 import java.util.ArrayList;
 
-import static android.content.Context.MODE_PRIVATE;
+import isep.lizhaojia.project1.Activities.Convertor;
+import isep.lizhaojia.project1.Activities.Income;
+import isep.lizhaojia.project1.Activities.Note;
+import isep.lizhaojia.project1.R;
 
 public class fragment_bill extends Fragment {
 

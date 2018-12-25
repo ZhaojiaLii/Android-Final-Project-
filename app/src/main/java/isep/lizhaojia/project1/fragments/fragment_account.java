@@ -1,4 +1,4 @@
-package isep.lizhaojia.project1;
+package isep.lizhaojia.project1.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,11 +8,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class fragment_profile extends Fragment {
+import isep.lizhaojia.project1.R;
+
+public class fragment_account extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.about_us, container, false);
+        return inflater.inflate(R.layout.fragment_account, container, false);
     }
 }

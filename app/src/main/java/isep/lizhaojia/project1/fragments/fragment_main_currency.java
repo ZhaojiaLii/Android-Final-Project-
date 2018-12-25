@@ -1,4 +1,4 @@
-package isep.lizhaojia.project1;
+package isep.lizhaojia.project1.fragments;
 
 import android.nfc.Tag;
 import android.os.Bundle;
