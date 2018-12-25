@@ -42,18 +42,47 @@ public class fragment_expenditure extends Fragment {
         initData();
 
 
-        recyclerView = view.findViewById(R.id.recyclerview_expenditure);
-        mContext = recyclerView.getContext();
-        expenditure_recyclerview_adapter adapter = new expenditure_recyclerview_adapter(mContext,date_time,element_name,description_element,amount,bank_card_used);
-        recyclerView.setAdapter(adapter);
-        mLayoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(mLayoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
+//        recyclerView = view.findViewById(R.id.recyclerview_expenditure);
+//        mContext = recyclerView.getContext();
+//        expenditure_recyclerview_adapter adapter = new expenditure_recyclerview_adapter(mContext,date_time,element_name,description_element,amount,bank_card_used);
+//        mLayoutManager = new LinearLayoutManager(getActivity());
+//        recyclerView.setLayoutManager(mLayoutManager);
+//        recyclerView.setItemAnimator(new DefaultItemAnimator());
+//        recyclerView.setAdapter(adapter);
+
 
         return view;
     }
 
     private void initData(){
+        Log.d(TAG, "initData: prepare data of the recyclerview");
+        date_time.add("18/11/2018 Sunday");
+        element_name.add("Food");
+        description_element.add("BurgerKing");
+        amount.add("€26.00");
+        bank_card_used.add("SG card");
+
+        Log.d(TAG, "initData: prepare data of the recyclerview");
+        date_time.add("18/11/2018 Sunday");
+        element_name.add("Food");
+        description_element.add("BurgerKing");
+        amount.add("€26.00");
+        bank_card_used.add("SG card");
+
+        Log.d(TAG, "initData: prepare data of the recyclerview");
+        date_time.add("18/11/2018 Sunday");
+        element_name.add("Food");
+        description_element.add("BurgerKing");
+        amount.add("€26.00");
+        bank_card_used.add("SG card");
+
+        Log.d(TAG, "initData: prepare data of the recyclerview");
+        date_time.add("18/11/2018 Sunday");
+        element_name.add("Food");
+        description_element.add("BurgerKing");
+        amount.add("€26.00");
+        bank_card_used.add("SG card");
+
         Log.d(TAG, "initData: prepare data of the recyclerview");
         date_time.add("18/11/2018 Sunday");
         element_name.add("Food");
