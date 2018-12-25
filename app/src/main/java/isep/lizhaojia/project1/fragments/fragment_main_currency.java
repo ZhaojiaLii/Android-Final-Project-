@@ -1,4 +1,4 @@
-package isep.lizhaojia.project1;
+package isep.lizhaojia.project1.fragments;
 
 import android.nfc.Tag;
 import android.os.Bundle;
@@ -14,6 +14,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
+
+import isep.lizhaojia.project1.R;
 
 public class fragment_main_currency extends Fragment {
 
