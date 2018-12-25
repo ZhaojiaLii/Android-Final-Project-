@@ -32,7 +32,7 @@ public class fragment_bill extends Fragment {
     private Button IncomeButton, NoteButton, BudgetButton;
     private TextView expenditure, remainedbudget, trySP, tryNOTE2, tryNOTE, expenditure_total;
     ArrayList<String> tryList = new ArrayList<String>();
-    String income, note, buget, now;
+    String income="", note="", buget="", now="";
     double total = 0,note_value = 0,income_value = 0,buget_value= 0,now_value = 0,remainedbudget_value = 0;
 
     @Nullable
