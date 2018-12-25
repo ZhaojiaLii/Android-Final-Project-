@@ -29,9 +29,11 @@ public class fragment_bill extends Fragment {
 
 
     private ImageButton ButtonConvertor;
-    private Button IncomeButton,NoteButton,BudgetButton;
-    private TextView expenditure,remainedbudget,trySP;
+    private Button IncomeButton, NoteButton, BudgetButton;
+    private TextView expenditure, remainedbudget, trySP, tryNOTE2, tryNOTE, expenditure_total;
     ArrayList<String> tryList = new ArrayList<String>();
+    String income, note, buget, now;
+    double total,remainedbudget_value;
 
     @Nullable
     @Override
@@ -43,16 +45,22 @@ public class fragment_bill extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        ButtonConvertor = (ImageButton)getActivity().findViewById(R.id.imageButton_convertor) ;
+        ButtonConvertor = (ImageButton) getActivity().findViewById(R.id.imageButton_convertor);
         BudgetButton = (Button) getActivity().findViewById(R.id.budgetbutton);
-        IncomeButton = (Button)getActivity().findViewById(R.id.income);
-        NoteButton = (Button)getActivity().findViewById(R.id.note);
+        IncomeButton = (Button) getActivity().findViewById(R.id.income);
+        NoteButton = (Button) getActivity().findViewById(R.id.note);
         expenditure = (TextView) getActivity().findViewById(R.id.expenditure);
-        remainedbudget = (TextView)getActivity().findViewById(R.id.remain_budget);
-        trySP = (TextView)getActivity().findViewById(R.id.trySP);
+        expenditure_total = (TextView) getActivity().findViewById(R.id.expenditure_total);
+        remainedbudget = (TextView) getActivity().findViewById(R.id.remain_budget);
+        trySP = (TextView) getActivity().findViewById(R.id.trySP);
+        tryNOTE2 = (TextView) getActivity().findViewById(R.id.tryNOTE2);
+        tryNOTE = (TextView) getActivity().findViewById(R.id.tryNOTE);
+
 
         budget();
         trydata();
+        trynotedata();
+        gettotal();
 
         ButtonConvertor.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,6 +98,7 @@ public class fragment_bill extends Fragment {
 
             }
         });
+
     }
 
     public void dialogEditText() {
@@ -101,7 +110,12 @@ public class fragment_bill extends Fragment {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Toast.makeText(getActivity(), editText.getText().toString() + "", Toast.LENGTH_LONG).show();
-                remainedbudget.setText(editText.getText().toString());
+                buget = editText.getText().toString();
+                now = expenditure_total.getText().toString();
+                double buget_value = Double.parseDouble(buget);
+                double now_value = Double.parseDouble(now);
+                remainedbudget_value = buget_value + now_value;
+                remainedbudget.setText(String.valueOf(remainedbudget_value));
             }
         });
         builder.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
@@ -117,6 +131,27 @@ public class fragment_bill extends Fragment {
         SharedPreferences sharedPreferences = getContext().getSharedPreferences("IncomeInfo", Context.MODE_PRIVATE);
         String income = sharedPreferences.getString("Income_", null);
         trySP.setText(income);
+
     }
 
+    public void trynotedata() {
+        SharedPreferences sharedPreferences = getContext().getSharedPreferences("NoteInfo", Context.MODE_PRIVATE);
+        String note = sharedPreferences.getString("Note_", null);
+        tryNOTE.setText(note);
+        tryNOTE2.setText("others");
+
+    }
+
+    public void gettotal() {
+
+        note = tryNOTE.getText().toString();
+        income = trySP.getText().toString();
+
+        double note_value = Double.parseDouble(note);
+        double income_value = Double.parseDouble(income);
+        total = income_value - note_value;
+
+        expenditure_total.setText(String.valueOf(total));
+
+    }
 }

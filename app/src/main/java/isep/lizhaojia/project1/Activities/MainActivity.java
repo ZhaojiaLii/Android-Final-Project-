@@ -20,7 +20,6 @@ import isep.lizhaojia.project1.fragments.fragment_background;
 import isep.lizhaojia.project1.fragments.fragment_bill;
 import isep.lizhaojia.project1.fragments.fragment_expenditure;
 import isep.lizhaojia.project1.fragments.fragment_main_currency;
-import isep.lizhaojia.project1.fragments.fragment_profile;
 import isep.lizhaojia.project1.fragments.fragment_upgrade;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
@@ -101,9 +100,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         Fragment selectedFragment = null;
         switch (menuItem.getItemId()){
-            case R.id.profile:
-                selectedFragment = new fragment_profile();
-                break;
             case R.id.my_currency:
                 selectedFragment = new fragment_main_currency();
                 break;
