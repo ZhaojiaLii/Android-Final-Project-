@@ -1,4 +1,4 @@
-package isep.lizhaojia.project1.fragments;
+package isep.lizhaojia.project1;
 
 import android.graphics.Color;
 import android.os.Bundle;

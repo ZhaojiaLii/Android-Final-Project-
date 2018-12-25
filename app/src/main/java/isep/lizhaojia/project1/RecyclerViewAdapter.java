@@ -1,4 +1,4 @@
-package isep.lizhaojia.project1.Adapters;
+package isep.lizhaojia.project1;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -16,7 +16,6 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-import isep.lizhaojia.project1.R;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
     private static final String TAG = "RecyclerViewAdapter";

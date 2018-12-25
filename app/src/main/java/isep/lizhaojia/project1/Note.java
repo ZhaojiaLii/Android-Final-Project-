@@ -1,9 +1,7 @@
-package isep.lizhaojia.project1.Activities;
+package isep.lizhaojia.project1;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
-import isep.lizhaojia.project1.R;
 
 public class Note extends AppCompatActivity {
 
