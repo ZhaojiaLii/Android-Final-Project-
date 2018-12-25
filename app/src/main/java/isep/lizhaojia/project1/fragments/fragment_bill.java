@@ -33,7 +33,7 @@ public class fragment_bill extends Fragment {
     private TextView expenditure, remainedbudget, trySP, tryNOTE2, tryNOTE, expenditure_total;
     ArrayList<String> tryList = new ArrayList<String>();
     String income, note, buget, now;
-    double total,remainedbudget_value;
+    double total = 0,note_value = 0,income_value = 0,buget_value= 0,now_value = 0,remainedbudget_value = 0;
 
     @Nullable
     @Override
@@ -112,8 +112,8 @@ public class fragment_bill extends Fragment {
                 Toast.makeText(getActivity(), editText.getText().toString() + "", Toast.LENGTH_LONG).show();
                 buget = editText.getText().toString();
                 now = expenditure_total.getText().toString();
-                double buget_value = Double.parseDouble(buget);
-                double now_value = Double.parseDouble(now);
+                buget_value = Double.parseDouble(buget);
+                now_value = Double.parseDouble(now);
                 remainedbudget_value = buget_value + now_value;
                 remainedbudget.setText(String.valueOf(remainedbudget_value));
             }
@@ -147,8 +147,8 @@ public class fragment_bill extends Fragment {
         note = tryNOTE.getText().toString();
         income = trySP.getText().toString();
 
-        double note_value = Double.parseDouble(note);
-        double income_value = Double.parseDouble(income);
+        note_value = Double.parseDouble(note);
+        income_value = Double.parseDouble(income);
         total = income_value - note_value;
 
         expenditure_total.setText(String.valueOf(total));
