@@ -33,10 +33,8 @@ public class fragment_bill extends Fragment {
 
     private ImageButton ButtonConvertor;
     private Button IncomeButton,NoteButton,BudgetButton;
-    private TextView expenditure,remainedbudget,trySP,tryNOTE,expendituretotal,trySP2;
+    private TextView expenditure,remainedbudget,trySP;
     ArrayList<String> tryList = new ArrayList<String>();
-    String note,income,now,buget;
-    double total,remained;
 
     @Nullable
     @Override
@@ -55,14 +53,9 @@ public class fragment_bill extends Fragment {
         expenditure = (TextView) getActivity().findViewById(R.id.expenditure);
         remainedbudget = (TextView)getActivity().findViewById(R.id.remain_budget);
         trySP = (TextView)getActivity().findViewById(R.id.trySP);
-        tryNOTE = (TextView)getActivity().findViewById(R.id.tryNOTE);
-        trySP2 = (TextView)getActivity().findViewById(R.id.trySP2);
-        expendituretotal = (TextView) getActivity().findViewById(R.id.expenditureTotal);
 
         budget();
-        tryincomedata();
-        trynotedata();
-        gettotal();
+        trydata();
 
         ButtonConvertor.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,12 +104,7 @@ public class fragment_bill extends Fragment {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Toast.makeText(getActivity(), editText.getText().toString() + "", Toast.LENGTH_LONG).show();
-                buget = editText.getText().toString();
-                now = expendituretotal.getText().toString();
-                double buget_value = Double.parseDouble(buget);
-                double now_value = Double.parseDouble(now);
-                remained = buget_value + now_value;
-                remainedbudget.setText(String.valueOf(remained));
+                remainedbudget.setText(editText.getText().toString());
             }
         });
         builder.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
@@ -128,33 +116,10 @@ public class fragment_bill extends Fragment {
         builder.create().show();
     }
 
-    public void tryincomedata() {
+    public void trydata() {
         SharedPreferences sharedPreferences = getContext().getSharedPreferences("IncomeInfo", Context.MODE_PRIVATE);
         String income = sharedPreferences.getString("Income_", null);
         trySP.setText(income);
-        trySP2.setText("others");
-    }
-
-    public void trynotedata() {
-        SharedPreferences sharedPreferences = getContext().getSharedPreferences("NoteInfo", Context.MODE_PRIVATE);
-        String note = sharedPreferences.getString("Note_", null);
-        tryNOTE.setText(note);
-
-    }
-
-    public void gettotal(){
-
-        note = tryNOTE.getText().toString();
-        income = trySP.getText().toString();
-
-        double note_value = Double.parseDouble(note);
-        double income_value = Double.parseDouble(income);
-        total = note_value - income_value;
-
-
-        expendituretotal.setText(String.valueOf(total));
-
-
     }
 
 }
