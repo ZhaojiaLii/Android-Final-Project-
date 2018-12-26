@@ -33,7 +33,7 @@ public class fragment_bill extends Fragment {
     private TextView expenditure, remainedbudget, trySP, tryNOTE2, tryNOTE, expenditure_total;
     ArrayList<String> tryList = new ArrayList<String>();
     String income="", note="", buget="", now="";
-    double total = 0,note_value = 0,income_value = 0,buget_value= 0,now_value = 0,remainedbudget_value = 0;
+    double total = 0.0 ,note_value = 0.0 ,income_value = 0.0 ,buget_value= 0.0 ,now_value = 0.0 ,remainedbudget_value = 0.0;
 
     @Nullable
     @Override
@@ -60,7 +60,7 @@ public class fragment_bill extends Fragment {
         budget();
         trydata();
         trynotedata();
-        gettotal();
+        //gettotal();
 
         ButtonConvertor.setOnClickListener(new View.OnClickListener() {
             @Override
