@@ -20,11 +20,13 @@
             android:padding="40dp"
             android:gravity="right|bottom"
             android:layout_weight="1">
+
             <Button
                 android:id="@+id/blue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="blue" />
+                android:layout_centerHorizontal="true"
+                android:text="night        mode" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -33,11 +35,13 @@
             android:padding="40dp"
             android:gravity="left|bottom"
             android:layout_weight="1">
+
             <Button
                 android:id="@+id/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="black" />
+                android:layout_centerHorizontal="true"
+                android:text="weekend mode" />
         </RelativeLayout>
     </LinearLayout>
 
@@ -52,11 +56,12 @@
             android:padding="40dp"
             android:gravity="right|top"
             android:layout_weight="1">
+
             <Button
                 android:id="@+id/pink"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="blue" />
+                android:text="low-battery mode" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -65,11 +70,12 @@
             android:padding="40dp"
             android:gravity="left|top"
             android:layout_weight="1">
+
             <Button
                 android:id="@+id/green"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="black" />
+                android:text="custom    mode" />
         </RelativeLayout>
     </LinearLayout>
 

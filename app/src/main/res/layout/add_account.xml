@@ -20,13 +20,15 @@
             android:layout_weight="1"
             android:orientation="vertical"
             android:background="@color/colorPrimary">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Add a new account"
-                android:textSize="26dp"
+                android:layout_marginTop="30dp"
                 android:gravity="center"
-                android:layout_marginTop="30dp"/>
+                android:text="Add a new account"
+                android:textColor="@android:color/white"
+                android:textSize="26dp" />
 
         </RelativeLayout>
 
@@ -122,15 +124,17 @@
 
             <Button
                 android:id="@+id/save_account"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="  save account  "
-                android:textAllCaps="false"
-                android:background="@drawable/shape_save_btn"
+                android:layout_width="119dp"
+                android:layout_height="69dp"
                 android:layout_below="@id/third_part"
                 android:layout_centerInParent="true"
-                android:layout_marginTop="10dp"
-                />
+                android:layout_marginTop="22dp"
+                android:background="@drawable/lightpink"
+                android:text="  save account  "
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
 
 

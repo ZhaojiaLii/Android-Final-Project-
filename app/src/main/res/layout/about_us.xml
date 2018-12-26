@@ -6,7 +6,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="group members:\nWanxun Xu\nYao Xiao\nZhaojia Li\nYi Liu"
+        android:text="Development\ngroup members:\nWanxun Xu\nYao Xiao\nZhaojia Li\nYi Liu"
         android:textStyle="bold"
         android:textSize="20sp"
         android:textColor="@color/darkgray"
