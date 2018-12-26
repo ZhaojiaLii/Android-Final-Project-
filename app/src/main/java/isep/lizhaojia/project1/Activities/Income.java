@@ -3,6 +3,7 @@ package isep.lizhaojia.project1.Activities;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.view.View;
@@ -46,6 +47,18 @@ public class Income extends AppCompatActivity implements View.OnClickListener {
         buttonConfirm = (Button) findViewById(R.id.confirm);
         buttonRe = (Button)findViewById(R.id.button13);
         textView = (TextView)findViewById(R.id.textView_income);
+        spinnerAccount = (Spinner) findViewById(R.id.spinner);
+        spinnerCurrency =(Spinner)findViewById(R.id.spinner2);
+
+
+        String[] arr={"SG","CIC","HSBC","ONLINE ACCOUNT"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,arr);
+        spinnerAccount.setAdapter(adapter);
+
+        String[] arr1={"EURO","DOLLAR","POUNDS","YEN","YUAN"};
+        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,arr1);
+        spinnerCurrency.setAdapter(adapter1);
+
 
         buttonConfirm.setOnClickListener(this);
         buttonPoint.setOnClickListener(this);

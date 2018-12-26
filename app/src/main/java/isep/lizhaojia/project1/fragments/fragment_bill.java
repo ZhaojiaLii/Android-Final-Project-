@@ -32,7 +32,7 @@ public class fragment_bill extends Fragment {
     private Button IncomeButton, NoteButton, BudgetButton;
     private TextView expenditure, remainedbudget, trySP, tryNOTE2, tryNOTE, expenditure_total;
     ArrayList<String> tryList = new ArrayList<String>();
-    String income="", note="", buget="", now="";
+    String income="0", note="0", buget="0", now="0";
     double total = 0.0 ,note_value = 0.0 ,income_value = 0.0 ,buget_value= 0.0 ,now_value = 0.0 ,remainedbudget_value = 0.0;
 
     @Nullable
@@ -62,7 +62,7 @@ public class fragment_bill extends Fragment {
         try_notedata();
         try_notefooddata();
         //try_noteshoppingdata();
-        //gettotal();
+        gettotal();
 
         ButtonConvertor.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,7 +111,7 @@ public class fragment_bill extends Fragment {
         builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(getActivity(), editText.getText().toString() + "", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), "Your buget is setted as "+editText.getText().toString() + "", Toast.LENGTH_LONG).show();
                 buget = editText.getText().toString();
                 now = expenditure_total.getText().toString();
                 buget_value = Double.parseDouble(buget);

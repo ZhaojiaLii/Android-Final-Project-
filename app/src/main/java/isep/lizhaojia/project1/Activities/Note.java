@@ -6,13 +6,16 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.AdapterView.OnItemSelectedListener;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import isep.lizhaojia.project1.R;
 
@@ -49,6 +52,18 @@ public class Note extends AppCompatActivity implements View.OnClickListener {
         imagefood=(ImageButton)findViewById(R.id.imageButton_food);
         imageshopping=(ImageButton)findViewById(R.id.imageButton3);
         textView_note = (TextView)findViewById(R.id.textView_note);
+        spinnerAccount = (Spinner) findViewById(R.id.spinner3);
+        spinnerCurrency =(Spinner)findViewById(R.id.spinner4);
+
+
+        String[] arr={"SG","CIC","HSBC","ONLINE ACCOUNT"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,arr);
+        spinnerAccount.setAdapter(adapter);
+
+        String[] arr1={"EURO","DOLLAR","POUNDS","YEN","YUAN"};
+        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,arr1);
+        spinnerCurrency.setAdapter(adapter1);
+
 
         buttonConfirm.setOnClickListener(this);
         buttonPoint.setOnClickListener(this);
