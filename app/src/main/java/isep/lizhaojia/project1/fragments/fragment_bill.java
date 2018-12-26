@@ -62,7 +62,7 @@ public class fragment_bill extends Fragment {
         try_notedata();
         try_notefooddata();
         //try_noteshoppingdata();
-        gettotal();
+        //gettotal();
 
         ButtonConvertor.setOnClickListener(new View.OnClickListener() {
             @Override

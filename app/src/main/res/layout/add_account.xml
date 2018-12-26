@@ -38,21 +38,101 @@
             android:layout_weight="7"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/account_name"
+            <LinearLayout
+                android:id="@id/first_part"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Please write your account name:"
-                android:paddingLeft="20dp"
-                android:textSize="18dp"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:id="@+id/account_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Please write your account name:"
+                    android:paddingLeft="20dp"
+                    android:textSize="18dp"
+                    />
+
+                <EditText
+                    android:id="@+id/type_account_name"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="account name"
+                    android:layout_below="@id/account_name"
+                    android:drawableRight="@drawable/edit"
+                    android:paddingRight="15dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/second_part_"
+                android:layout_below="@id/first_part"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:id="@+id/amount_of_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Please write the amount of money:"
+                    android:paddingLeft="20dp"
+                    android:textSize="18dp"
+                    />
+
+                <EditText
+                    android:id="@+id/type_amount"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="total amount"
+                    android:layout_below="@id/amount_of_money"
+                    android:drawableRight="@drawable/edit"
+                    android:paddingRight="15dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/third_part"
+                android:layout_below="@id/second_part_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:id="@+id/choose_currency"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="The currency you have selected:"
+                    android:paddingLeft="20dp"
+                    android:textSize="18dp"
+                    />
+                <TextView
+                    android:id="@+id/currency"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="currency"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="18dp"
+                    android:paddingTop="6dp"/>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/save_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  save account  "
+                android:textAllCaps="false"
+                android:background="@drawable/shape_save_btn"
+                android:layout_below="@id/third_part"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
                 />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="account name"
-                android:layout_below="@id/account_name"
-                android:paddingLeft="20dp"/>
+
 
 
         </RelativeLayout>

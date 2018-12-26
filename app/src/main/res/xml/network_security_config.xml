@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">http://data.fixer.io/api/latest?access_key=759fcbe1e3005a4bd0f8bcc1e030b831</domain>
+    </domain-config>
+</network-security-config>
