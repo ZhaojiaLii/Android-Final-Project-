@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,10 +18,12 @@ import isep.lizhaojia.project1.R;
 
 public class Note extends AppCompatActivity implements View.OnClickListener {
     Button button0,buttonPoint,buttonConfirm,button1,button2,button3,button4,button5,button6,button7,button8,button9,buttonRe;
+    ImageButton imagefood,imageshopping;
     Spinner spinnerCurrency,spinnerAccount;
     TextView textView_note;
     private String str,str1;
     boolean clr_flag;
+    int food=0,shopping=0;
     //double str1_value;
     ArrayList<String> NoteList = new ArrayList<>();
 
@@ -43,6 +46,8 @@ public class Note extends AppCompatActivity implements View.OnClickListener {
         buttonPoint = (Button) findViewById(R.id.buttonpoint);
         buttonConfirm = (Button) findViewById(R.id.confirm);
         buttonRe = (Button)findViewById(R.id.button13);
+        imagefood=(ImageButton)findViewById(R.id.imageButton_food);
+        imageshopping=(ImageButton)findViewById(R.id.imageButton3);
         textView_note = (TextView)findViewById(R.id.textView_note);
 
         buttonConfirm.setOnClickListener(this);
@@ -58,6 +63,8 @@ public class Note extends AppCompatActivity implements View.OnClickListener {
         button7.setOnClickListener(this);
         button8.setOnClickListener(this);
         button9.setOnClickListener(this);
+        imagefood.setOnClickListener(this);
+        imageshopping.setOnClickListener(this);
 
 
 
@@ -102,6 +109,11 @@ public class Note extends AppCompatActivity implements View.OnClickListener {
                     startActivity(intent4);}
                 break;
 
+            case R.id.imageButton_food:
+                food=+1;
+                break;
+
+
         }
     }
 
@@ -113,10 +125,19 @@ public class Note extends AppCompatActivity implements View.OnClickListener {
         SharedPreferences sharedPreferences = getSharedPreferences("NoteInfo", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt("note", NoteList.size());
-        for (int i = 0; i < NoteList.size(); i++) {
-            editor.putString("Note_", NoteList.get(i));
+        if (food==1){
+            for (int i = 0; i < NoteList.size(); i++) {
+                editor.putString("Note_food", NoteList.get(i));
+
+            }
+        }
+        else {
+            for (int i = 0; i < NoteList.size(); i++) {
+                editor.putString("Note_default", NoteList.get(i));
+            }
         }
         editor.commit();
+        food=0;
 
     }
 

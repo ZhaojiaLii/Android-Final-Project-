@@ -15,7 +15,7 @@
         android:src="@drawable/background" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/imageButton_food"
         android:layout_width="78dp"
         android:layout_height="75dp"
         android:adjustViewBounds="true"

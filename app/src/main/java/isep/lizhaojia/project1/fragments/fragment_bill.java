@@ -59,7 +59,9 @@ public class fragment_bill extends Fragment {
 
         budget();
         trydata();
-        trynotedata();
+        try_notedata();
+        try_notefooddata();
+        //try_noteshoppingdata();
         //gettotal();
 
         ButtonConvertor.setOnClickListener(new View.OnClickListener() {
@@ -134,12 +136,25 @@ public class fragment_bill extends Fragment {
 
     }
 
-    public void trynotedata() {
+    public void try_notedata() {
         SharedPreferences sharedPreferences = getContext().getSharedPreferences("NoteInfo", Context.MODE_PRIVATE);
-        String note = sharedPreferences.getString("Note_", null);
+        String note = sharedPreferences.getString("Note_default", null);
         tryNOTE.setText(note);
-        tryNOTE2.setText("others");
+        tryNOTE2.setText("Others");
 
+    }
+    public void try_notefooddata() {
+        SharedPreferences sharedPreferences = getContext().getSharedPreferences("NoteInfo", Context.MODE_PRIVATE);
+        String note = sharedPreferences.getString("Note_food", null);
+        tryNOTE.setText(note);
+        tryNOTE2.setText("Food");
+    }
+
+    public void try_noteshoppingdata(){
+        SharedPreferences sharedPreferences = getContext().getSharedPreferences("NoteInfo", Context.MODE_PRIVATE);
+        String note = sharedPreferences.getString("Note_shopping", null);
+        tryNOTE.setText(note);
+        tryNOTE2.setText("Shopping");
     }
 
     public void gettotal() {
