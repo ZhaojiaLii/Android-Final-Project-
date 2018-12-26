@@ -42,13 +42,13 @@ public class fragment_expenditure extends Fragment {
         initData();
 
 
-        recyclerView = view.findViewById(R.id.recyclerview_expenditure);
-        mContext = recyclerView.getContext();
-        expenditure_recyclerview_adapter adapter = new expenditure_recyclerview_adapter(mContext,date_time,element_name,description_element,amount,bank_card_used);
-        mLayoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(mLayoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(adapter);
+//        recyclerView = view.findViewById(R.id.recyclerview_expenditure);
+//        mContext = recyclerView.getContext();
+//        expenditure_recyclerview_adapter adapter = new expenditure_recyclerview_adapter(mContext,date_time,element_name,description_element,amount,bank_card_used);
+//        mLayoutManager = new LinearLayoutManager(getActivity());
+//        recyclerView.setLayoutManager(mLayoutManager);
+//        recyclerView.setItemAnimator(new DefaultItemAnimator());
+//        recyclerView.setAdapter(adapter);
 
 
         return view;

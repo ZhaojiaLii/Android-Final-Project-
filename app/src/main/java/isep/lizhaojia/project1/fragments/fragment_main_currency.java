@@ -30,7 +30,7 @@ public class fragment_main_currency extends Fragment {
 
     private static final String TAG = "fragment_main_currency";
 
-    TextView header,currency_choosed,history, show_history;
+    TextView header,currency_choosed;
     ArrayList<String> selected_history = new ArrayList<String>();
 
     @Nullable
@@ -40,8 +40,7 @@ public class fragment_main_currency extends Fragment {
 
         header = view.findViewById(R.id.header);
         currency_choosed = view.findViewById(R.id.currency_choosed);
-        history = view.findViewById(R.id.history);
-        show_history = view.findViewById(R.id.show_history);
+
 
         CurrencyPicker picker = CurrencyPicker.newInstance("select Currency");
         picker.setListener(new CurrencyPickerListener() {
