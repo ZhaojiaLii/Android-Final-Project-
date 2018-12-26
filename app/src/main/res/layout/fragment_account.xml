@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -9,25 +10,38 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:orientation="vertical"
-        android:paddingLeft="10dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:weightSum="3">
+
+        android:weightSum="8">
 
         <RelativeLayout
             android:id="@+id/first_part"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:orientation="vertical">
-
+            android:orientation="vertical"
+            android:background="@color/colorPrimary">
             <TextView
+                android:id="@+id/property"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="sub layout 1" />
+                android:text="Property"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#f06292"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="30dp"/>
 
+            <TextView
+                android:layout_toRightOf="@id/property"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="amount"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#f06292"
+                android:layout_marginTop="35dp"
+                android:gravity="right"
+                android:layout_marginRight="35dp"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -35,24 +49,59 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@id/first_part"
-            android:layout_weight="2"
+            android:layout_weight="7"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <android.support.v7.widget.CardView
+                android:id="@+id/example"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="sub layout 2" />
+                app:cardCornerRadius="12dp"
+                app:cardElevation="12dp"
+                android:layout_margin="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Account name"
+                    android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="30dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="35dp"
+                    android:gravity="right"
+                    android:text="amount"/>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="12dp"
+                android:layout_margin="20dp"
+                android:layout_below="@id/example">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:paddingLeft="30dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:paddingTop="12dp"
+                    android:paddingRight="35dp"
+                    android:paddingLeft="80dp"
+                    android:text="Add an account"/>
+
+            </android.support.v7.widget.CardView>
+
         </RelativeLayout>
 
 
     </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Account Fragment"
-        android:textSize="30sp" />
 
 </RelativeLayout>
