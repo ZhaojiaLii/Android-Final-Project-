@@ -20,28 +20,29 @@
             android:layout_weight="1"
             android:orientation="vertical"
             android:background="@color/colorPrimary">
+
             <TextView
                 android:id="@+id/property"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Property"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:textColor="#f06292"
+                android:layout_marginLeft="30dp"
                 android:layout_marginTop="35dp"
-                android:layout_marginLeft="30dp"/>
+                android:text="Property"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
             <TextView
-                android:layout_toRightOf="@id/property"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="amount"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:textColor="#f06292"
                 android:layout_marginTop="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_toRightOf="@id/property"
                 android:gravity="right"
-                android:layout_marginRight="35dp"/>
+                android:text="amount"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
