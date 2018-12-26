@@ -19,6 +19,7 @@ public class fragment_background extends Fragment implements View.OnClickListene
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.background, container, false);
+
         Button blue = (Button) view.findViewById(R.id.blue);
         Button black = (Button) view.findViewById(R.id.black);
         Button pink = (Button) view.findViewById(R.id.pink);

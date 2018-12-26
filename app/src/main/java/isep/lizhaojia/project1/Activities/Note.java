@@ -20,8 +20,8 @@ import java.util.List;
 import isep.lizhaojia.project1.R;
 
 public class Note extends AppCompatActivity implements View.OnClickListener {
-    Button button0,buttonPoint,buttonConfirm,button1,button2,button3,button4,button5,button6,button7,button8,button9,buttonRe;
-    ImageButton imagefood,imageshopping;
+    Button button0,buttonPoint,buttonConfirm,button1,button2,button3,button4,button5,button6,button7,button8,button9,buttonRe,button_shop,button_food;
+    //ImageButton imagefood,imageshopping;
     Spinner spinnerCurrency,spinnerAccount;
     TextView textView_note;
     private String str,str1;
@@ -49,8 +49,8 @@ public class Note extends AppCompatActivity implements View.OnClickListener {
         buttonPoint = (Button) findViewById(R.id.buttonpoint);
         buttonConfirm = (Button) findViewById(R.id.confirm);
         buttonRe = (Button)findViewById(R.id.button13);
-        imagefood=(ImageButton)findViewById(R.id.imageButton_food);
-        imageshopping=(ImageButton)findViewById(R.id.imageButton3);
+        button_food = (Button) findViewById(R.id.button_food);
+        button_shop = (Button) findViewById(R.id.button_shop);
         textView_note = (TextView)findViewById(R.id.textView_note);
         spinnerAccount = (Spinner) findViewById(R.id.spinner3);
         spinnerCurrency =(Spinner)findViewById(R.id.spinner4);
@@ -78,8 +78,8 @@ public class Note extends AppCompatActivity implements View.OnClickListener {
         button7.setOnClickListener(this);
         button8.setOnClickListener(this);
         button9.setOnClickListener(this);
-        imagefood.setOnClickListener(this);
-        imageshopping.setOnClickListener(this);
+        button_shop.setOnClickListener(this);
+        button_food.setOnClickListener(this);
 
 
 
@@ -124,7 +124,7 @@ public class Note extends AppCompatActivity implements View.OnClickListener {
                     startActivity(intent4);}
                 break;
 
-            case R.id.imageButton_food:
+            case R.id.button_food:
                 food=+1;
                 break;
 
