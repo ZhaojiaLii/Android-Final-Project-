@@ -14,9 +14,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.load.model.UriLoader;
 import com.mynameismidori.currencypicker.CurrencyPicker;
 import com.mynameismidori.currencypicker.CurrencyPickerListener;
-
+import android.support.v4.app.Fragment;
 import isep.lizhaojia.project1.R;
 import isep.lizhaojia.project1.fragments.fragment_account;
 
@@ -27,6 +28,8 @@ public class Add_account extends AppCompatActivity {
 
     Button save_account;
     Fragment fragment = null;
+
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -58,12 +61,15 @@ public class Add_account extends AppCompatActivity {
 //                fragment = new fragment_account();
 //                load_fragment(fragment);
 
+                Toast.makeText(getApplicationContext(),"new account saved",Toast.LENGTH_SHORT).show();
+
                 Intent intent = new Intent(Add_account.this,MainActivity.class);
                 intent.putExtra("account name",type_account_name.getText().toString());
                 intent.putExtra("total amount",type_amount.getText().toString());
                 startActivity(intent);
             }
         });
+
 
 
 

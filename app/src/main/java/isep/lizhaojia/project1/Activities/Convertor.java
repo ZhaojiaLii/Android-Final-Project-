@@ -67,8 +67,6 @@ public class Convertor extends AppCompatActivity {
                     if(success.equals("true")){
                         JSONObject rates = response.getJSONObject("rates");
                         System.out.println(rates);
-
-
                         Iterator<?> ID = rates.keys();
                         double value_;
                         String value = "";
@@ -103,7 +101,7 @@ public class Convertor extends AppCompatActivity {
         });
         requestQueue.add(jasonObjectRequest);
 
-        ID_list.add("-select-");
+        ID_list.add("currency");
 
         adapter1 = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,ID_list);
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

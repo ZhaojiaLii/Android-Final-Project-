@@ -7,12 +7,31 @@
     android:layout_height="match_parent"
     tools:context=".Activities.Convertor">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Currency Converter"
+        android:textColor="#424242"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.109" />
+
     <Spinner
         android:id="@+id/currency1_spinner"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="31dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="152dp"
         android:layout_marginEnd="76dp"
         android:textColor="#222288"
         app:layout_constraintEnd_toStartOf="@+id/currency2_spinner"
@@ -23,7 +42,7 @@
         android:id="@+id/currency2_spinner"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="152dp"
         android:layout_marginEnd="31dp"
         android:textColor="#222288"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,7 +65,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.405" />
+        app:layout_constraintVertical_bias="0.467" />
 
     <TextView
         android:id="@+id/currency2_textView"
@@ -61,10 +80,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_editText"
-        app:layout_constraintVertical_bias="0.538" />
+        app:layout_constraintVertical_bias="0.509" />
 
     <Button
         android:id="@+id/convert_button"
@@ -81,8 +100,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/currency2_textView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/input_editText" />
+        app:layout_constraintTop_toBottomOf="@+id/input_editText"
+        app:layout_constraintVertical_bias="0.409" />
 
     <TextView
         android:id="@+id/textView"

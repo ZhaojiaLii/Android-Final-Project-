@@ -93,6 +93,17 @@
                 android:drawableLeft="@drawable/addimage"
                 android:paddingLeft="20dp"/>
 
+            <TextView
+                android:id="@+id/test"
+                android:textColor="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="145dp"
+                android:layout_marginBottom="138dp"
+                android:text="TextView" />
+
 
         </RelativeLayout>
 

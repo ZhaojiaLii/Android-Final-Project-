@@ -1,6 +1,7 @@
 package isep.lizhaojia.project1.fragments;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -19,6 +20,7 @@ import isep.lizhaojia.project1.R;
 public class fragment_account extends Fragment {
 
 
+    TextView test;
     Button add_btn;
     RelativeLayout relativeLayout;
     @Nullable
@@ -27,6 +29,7 @@ public class fragment_account extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_account, container, false);
         return  view;
     }
+
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {

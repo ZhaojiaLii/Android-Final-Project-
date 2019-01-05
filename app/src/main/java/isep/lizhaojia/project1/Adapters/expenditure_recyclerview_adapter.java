@@ -63,13 +63,13 @@ public class expenditure_recyclerview_adapter extends RecyclerView.Adapter<expen
         viewHolder.amount.setText(amount.get(i));
         viewHolder.bank_card_used.setText(bank_card_used.get(i));
 
-        viewHolder.expenditure.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d(TAG, "onClick: clicked on" + description_element.get(i));
-                Toast.makeText(mContext,description_element.get(i)+" "+amount.get(i),Toast.LENGTH_SHORT);
-            }
-        });
+//        viewHolder.expenditure.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Log.d(TAG, "onClick: clicked on" + description_element.get(i));
+//                Toast.makeText(mContext,description_element.get(i)+" "+amount.get(i),Toast.LENGTH_SHORT);
+//            }
+//        });
 
     }
 
