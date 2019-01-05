@@ -30,7 +30,7 @@
         <activity android:name=".Activities.Income" />
         <activity android:name=".Activities.MainActivity" />
         <activity android:name=".Activities.Note" />
-        <activity android:name=".Activities.Add_account"></activity>
+        <activity android:name=".Activities.Add_account" />
     </application>
 
 </manifest>

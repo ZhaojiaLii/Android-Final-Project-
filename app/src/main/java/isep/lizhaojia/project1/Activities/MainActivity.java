@@ -1,5 +1,6 @@
 package isep.lizhaojia.project1.Activities;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
@@ -20,6 +21,7 @@ import isep.lizhaojia.project1.fragments.fragment_background;
 import isep.lizhaojia.project1.fragments.fragment_bill;
 import isep.lizhaojia.project1.fragments.fragment_expenditure;
 import isep.lizhaojia.project1.fragments.fragment_main_currency;
+import isep.lizhaojia.project1.fragments.fragment_profile;
 import isep.lizhaojia.project1.fragments.fragment_upgrade;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
@@ -112,14 +114,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.about:
                 selectedFragment = new fragment_aboutus();
                 break;
+            case R.id.userinfo:
+                selectedFragment = new fragment_profile();
+                break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();
         return true;
 
     }
-
-
-
 
 }
