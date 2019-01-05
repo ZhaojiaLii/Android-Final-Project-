@@ -157,16 +157,18 @@ public class fragment_bill extends Fragment {
         tryNOTE2.setText("Shopping");
     }
 
-    public void gettotal() {
 
-        note = tryNOTE.getText().toString();
+   public void gettotal() {
+
+       /* note = tryNOTE.getText().toString();
         income = trySP.getText().toString();
 
         note_value = Double.parseDouble(note);
         income_value = Double.parseDouble(income);
         total = income_value - note_value;
 
-        expenditure_total.setText(String.valueOf(total));
+        expenditure_total.setText(String.valueOf(total));*/
 
     }
+
 }

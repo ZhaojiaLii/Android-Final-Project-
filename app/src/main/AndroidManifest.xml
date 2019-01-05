@@ -2,19 +2,24 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="isep.lizhaojia.project1"
     android:targetSandboxVersion="1">
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:networkSecurityConfig="@xml/network_security_config"
-        android:usesCleartextTraffic="true"
-        >
-
-        <activity android:name=".Activities.MainActivity">
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Activities.Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,9 +28,9 @@
         </activity>
         <activity android:name=".Activities.Convertor" />
         <activity android:name=".Activities.Income" />
+        <activity android:name=".Activities.MainActivity" />
+        <activity android:name=".Activities.Note" />
         <activity android:name=".Activities.Add_account"></activity>
-        <activity android:name=".Activities.Note"></activity>
-
     </application>
 
 </manifest>
